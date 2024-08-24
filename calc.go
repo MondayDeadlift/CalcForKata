@@ -115,12 +115,12 @@ func main() {
 	}
 
 	if !rim {
-		// вывода результата!
-		fmt.Println(out)
 		// Проверка на количество операторов
 		if operatorCount > 1 {
-			panic("нельзя использовать более одного оператора!")
+			panic(out)
 		}
+		// вывода результата!
+		fmt.Println(out)
 
 	} else {
 		if !rim1 {
@@ -153,12 +153,13 @@ func main() {
 				out -= rn.value
 			}
 		}
-		// и выводит получившуюся строку
-		fmt.Println(resultat)
 		// Проверка на количество операторов
 		if operatorCount > 1 {
-			panic("нельзя использовать более одного оператора!")
+			panic(resultat)
 		}
+		// и выводит получившуюся строку
+		fmt.Println(resultat)
+
 	}
 }
 
