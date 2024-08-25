@@ -117,7 +117,7 @@ func main() {
 	if !rim {
 		// Проверка на количество операторов
 		if operatorCount > 1 {
-			panic(out)
+			panic("нельзя использовать более одного оператора")
 		}
 		// вывода результата!
 		fmt.Println(out)
@@ -155,7 +155,7 @@ func main() {
 		}
 		// Проверка на количество операторов
 		if operatorCount > 1 {
-			panic(resultat)
+			panic("нельзя использовать более одного оператора")
 		}
 		// и выводит получившуюся строку
 		fmt.Println(resultat)
