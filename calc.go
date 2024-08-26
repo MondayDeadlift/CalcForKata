@@ -54,6 +54,10 @@ func main() {
 	input, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	result := strings.FieldsFunc(input, Split)
 
+	for i := range result {
+		result[i] = strings.TrimSpace(result[i])
+	}
+
 	//Пеобразование римских чисел в арабские, если таковые имеются
 	var rim bool
 	var rim1 bool
@@ -83,11 +87,11 @@ func main() {
 	/*дальше полученные подстроки преобразуются в целые числа без пробелов. Эти числа (num1 и num2) - наши переменные.
 	Если числа не получаются, выдается ошибка */
 
-	num1, err := strconv.Atoi(strings.TrimSpace(result[0]))
+	num1, err := strconv.Atoi(result[0])
 	if err != nil {
 		panic("Какие-то неправильные данные :с ")
 	}
-	num2, err := strconv.Atoi(strings.TrimSpace(result[1]))
+	num2, err := strconv.Atoi(result[1])
 	if err != nil {
 		panic("Какие-то неправильные данные :с ")
 	}
